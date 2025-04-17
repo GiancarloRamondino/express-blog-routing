@@ -6,10 +6,10 @@ const app = express();
 const port = 3000;
 
 //imposto asset statici
-//app.use(express.static('post'));
+app.use(express.static('imgs'));
 
 //importo il router
-const postsRouter = require('./router/post.js'); 
+const postsRouter = require('./router/posts.js'); 
 
 // uso post router per creare le rotte
 app.use('/menu', postsRouter);
